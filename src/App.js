@@ -54,11 +54,14 @@ const multipleSubscriptionData = [
     event.preventDefault();
     const name = event.target.name.value.trim();
     const email = event.target.email.value.trim();
+   const plan = event.target.plan.value;
     const password = event.target.password.value;
 
     const registrationData = {
       name,
       email,
+      plan,
+      password,
       password,
       registeredAt: new Date().toISOString(),
     };
@@ -86,6 +89,15 @@ const multipleSubscriptionData = [
         <label>
           Email:
           <input type="email" name="email" required />
+        </label>
+        <br />
+        <label>
+          Plan:
+          <select name="plan" defaultValue="Standard">
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+          </select>
         </label>
         <br />
         <label>

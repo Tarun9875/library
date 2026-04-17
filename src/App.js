@@ -8,14 +8,48 @@ function App() {
     name: 'John Doe',
     email: 'sdfsdf'
   }; */
-  const subscriptionData = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
+  /* Can we subscription data more */
+/*   const subscriptionData = [
+    {
+    name: 'Abc',
+    email: 'Abc@example.com',
     password: 'securepassword',
     plan: 'Basic',
     joinedDate: '2026-04-17',
-  };
+  },
+  {},
 
+  {
+  name: 'Xyz',
+  email: 'xyz@gmail.com',
+  password: 'securepassword',
+  plan: 'Premium',
+  joinedDate: '2026-04-18',
+
+}]; */
+const multipleSubscriptionData = [
+  {
+    name: 'Abc',
+    email: '',
+    password: 'securepassword',
+    plan: 'Basic',
+    joinedDate: '2026-04-17',
+  },
+  {
+    name: 'Xyz',
+    email: '',
+    password: 'securepassword',
+    plan: 'Premium',
+    joinedDate: '2026-04-18',
+  },
+  {
+    name: 'Pqr',
+    email: '',
+    password: 'securepassword',
+    plan: 'Standard',
+    joinedDate: '2026-04-19',
+  },
+];    
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value.trim();
@@ -30,7 +64,8 @@ function App() {
     };
 
     console.log('Library Management System');
-    console.log('Subscription dataset:', subscriptionData);
+    console.log('library subscription data:', multipleSubscriptionData);
+   /*  console.log('Subscription dataset:', multipleSubscriptionData); */
     console.log('Registration form data:', registrationData);
 
     setSubmittedData(registrationData);
